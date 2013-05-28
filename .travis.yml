@@ -16,4 +16,4 @@ script:
 
 notifications:
   irc:
-    - "irc.freenode.org#digipub"
+    - "irc.homelien.no#yaphan"
