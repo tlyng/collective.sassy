@@ -2,7 +2,7 @@
 """Setup/installation tests for this package."""
 
 from collective.sassy.testing import IntegrationTestCase
-from plone import api
+from Products.CMFCore.utils import getToolByName
 
 
 class TestInstall(IntegrationTestCase):
@@ -11,7 +11,7 @@ class TestInstall(IntegrationTestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
-        self.installer = api.portal.get_tool('portal_quickinstaller')
+        self.installer = getToolByName(self.portal, 'portal_quickinstaller')
 
     def test_product_installed(self):
         """Test if collective.sassy is installed with portal_quickinstaller."""
@@ -22,9 +22,12 @@ class TestInstall(IntegrationTestCase):
         self.installer.uninstallProducts(['collective.sassy'])
         self.assertFalse(self.installer.isProductInstalled('collective.sassy'))
 
-    # browserlayer.xml
-    def test_browserlayer(self):
-        """Test that ICollectiveSassyLayer is registered."""
-        from collective.sassy.interfaces import ICollectiveSassyLayer
-        from plone.browserlayer import utils
-        self.failUnless(ICollectiveSassyLayer in utils.registered_layers())
+    def test_tool_installed(self):
+        tool = getToolByName(self.portal, 'portal_scss')
+        self.assertTrue(tool != None)
+
+    def test_debug(self):
+        tool = getToolByName(self.portal, 'portal_scss')
+        context = self.portal
+        resources = tool.getEvaluatedResources(context)
+        import pdb; pdb.set_trace( )

@@ -1,8 +1,10 @@
 ====================
 collective.sassy
 ====================
+.. image:: https://secure.travis-ci.org/tlyng/collective.sassy.png
+     :target: http://travis-ci.org/tlyng/collective.sassy
 
-A Plone add-on that ...
+A Plone add-on that support for SCSS stylesheets.
 
 * `Source code @ GitHub <https://github.com/tlyng/collective.sassy>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/collective.sassy>`_
