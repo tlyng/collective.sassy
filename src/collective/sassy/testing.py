@@ -25,12 +25,14 @@ class CollectiveSassyLayer(PloneSandboxLayer):
         # Load ZCML
         import collective.sassy
         self.loadZCML(package=collective.sassy)
+        self.loadZCML('testing.zcml', package=collective.sassy)
         z2.installProduct(app, 'collective.sassy')
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         applyProfile(portal, 'collective.sassy:default')
+        applyProfile(portal, 'collective.sassy:tests')
 
         # Login and create some test content
         setRoles(portal, TEST_USER_ID, ['Manager'])

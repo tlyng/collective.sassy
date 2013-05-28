@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool-setup>
+
+  <required tool_id="portal_scss"
+    class="collective.sassy.tool.SCSSRegistryTool" />
+
+</tool-setup>

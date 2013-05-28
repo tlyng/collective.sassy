@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object name="portal_scss" meta_type="SCSS Stylesheets Registry">
+  <sassystylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="1" expression="" id="++sassy++collective.sassy.tests/test.scss" media="screen"
+    rel="stylesheet" rendering="link"/>
+</object>

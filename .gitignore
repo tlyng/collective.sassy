@@ -7,3 +7,6 @@ include
 lib
 parts
 var
+*.pyc
+.Python
+*.egg-info

@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.sassy">
+
+    <plone:static
+      directory="tests/resources"
+      type="sassy"
+      name="collective.sassy.tests"
+      />
+
+    <!-- Register the installation GenericSetup extension profile -->
+    <genericsetup:registerProfile
+        name="tests"
+        title="collective.sassy"
+        directory="profiles/tests"
+        description="Extension profile for collective.sassy."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+</configure>

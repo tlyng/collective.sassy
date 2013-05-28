@@ -26,8 +26,7 @@ class TestInstall(IntegrationTestCase):
         tool = getToolByName(self.portal, 'portal_scss')
         self.assertTrue(tool != None)
 
-    def test_debug(self):
-        tool = getToolByName(self.portal, 'portal_scss')
-        context = self.portal
-        resources = tool.getEvaluatedResources(context)
-        import pdb; pdb.set_trace( )
+    # def test_debug(self):
+    #     tool = getToolByName(self.portal, 'portal_scss')
+    #     context = self.portal
+    #     resources = tool.getEvaluatedResources(context)
