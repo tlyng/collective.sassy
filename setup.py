@@ -37,10 +37,11 @@ setup(
     zip_safe=False,
     install_requires=[
         'Pillow',
-        'Plone',
-        'plone.api',
         'setuptools',
-        'z3c.jbot',
+        'pyScss',
+        'Plone',
+        'Products.ResourceRegistries',
+        'plone.resource',
     ],
     extras_require={
         'test': [
